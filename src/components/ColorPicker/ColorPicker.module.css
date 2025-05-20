@@ -1,0 +1,25 @@
+.wrapper {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border: 2px dashed yellow;
+    --hue: 180deg;
+}
+
+.layer1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #000, #fff);
+}
+
+.layer2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,hsl(var(--hue) 100% 50% /0),hsl(var(--hue) 100% 50% /1));
+    mix-blend-mode: overlay;
+
+
+
+}

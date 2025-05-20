@@ -1,0 +1,7 @@
+.colorDiv {
+    --size: 40px;
+    height: var(--size);
+    width: var(--size);
+    background-color: deeppink;
+    position: relative;
+}
