@@ -35,11 +35,11 @@ function Colors() {
     return (
         <div>
             <h2>Colors</h2>
-
-            {
+            <div className={styles.colorsContainer}>
+                {
                 colorsArr.map(({id, color}) =>  <SingleColor setId={changeId} openId={openId} color={color} colorId={id} key={id} />)
-            }
-         
+                }
+            </div>       
         </div>
     )
 }

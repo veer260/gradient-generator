@@ -1,0 +1,23 @@
+
+.hueContainer {
+    /* position: relative; */
+    --huePickerHeight: 22px;
+
+}
+.huePicker {
+
+    height: var(--huePickerHeight);
+    width: 150px;
+    background: var(--gradient);   
+    position: absolute;
+    bottom: calc((var(--huePickerHeight)*-1) - 10px );
+}
+
+.trigger {
+    height: calc(var(--huePickerHeight) + 8px);
+    width: 10px;
+    border: 2px solid white;
+    top: -6px;
+    position: absolute;
+    transform: translateX(-50%);
+}

@@ -1,3 +1,6 @@
+.wrapper {
+    /* display: flex; */
+}
 .colorDiv {
     --size: 40px;
     height: var(--size);
