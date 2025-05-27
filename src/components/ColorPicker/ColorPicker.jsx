@@ -13,8 +13,8 @@ function ColorPicker() {
     const wrapperRef = React.useRef();
     const btnRef = React.useRef();
     const btnPos = usePlaceChild(wrapperRef);
+    console.log(btnPos);
 
-    console.dir({color});
 
     function handleHueChange(newHue) {
         setColor({
@@ -38,11 +38,13 @@ function ColorPicker() {
 
     return (
         <>
-         <div className={styles.wrapper}>
-            <div  className={styles.layer1}></div>
-            <div ref={wrapperRef} className={styles.layer2}>
+         <div className={styles.pickerContainer}>
+            <div ref={wrapperRef} className={styles.wrapper}>
+                <div className={styles.layer1}></div>
+                <div className={styles.layer2}></div> 
                 <button ref={btnRef} className={styles.btn} ></button>
-            </div>  
+            </div>
+            
             <HuePicker color={color} onHueChange={handleHueChange} />
         </div>
         </>       

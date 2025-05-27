@@ -12,6 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --gradient: "";
+  --gray-300: hsl(260, 8%, 21%);
 }
 
 .visually-hidden:not(:focus):not(:active) {

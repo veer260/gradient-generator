@@ -31,8 +31,7 @@ function usePlaceChild(containerRef) {
         const elem = containerRef.current;
 
         function handleMouseMove(e) {
-           const {left, top, width, height} = elem.getBoundingClientRect();
-        //    if(e.clientX > )
+           const {left, top, width, height} = elem.getBoundingClientRect();        //    if(e.clientX > )
                 let x = e.clientX - left;
                 let y = e.clientY - top;
 
@@ -41,15 +40,14 @@ function usePlaceChild(containerRef) {
                 }else if( x > width) {
                     x = width;
                 }
+                
                 if(y < 0) {
                     y = 0;
                 }else if( y > height) {
                     y = height;
                 }
+
                 
-
-
-
                 const newBtnPos = {
                     x, y
                 }

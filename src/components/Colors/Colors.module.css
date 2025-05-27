@@ -1,3 +1,4 @@
 .colorsContainer {
     display: flex;
+    gap: 12px;
 }
