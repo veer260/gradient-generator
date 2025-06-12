@@ -8,6 +8,7 @@ import { X } from 'react-feather';
 
 function SingleColor({color, colorId, openId, setId, toShow, index}) {
     const {state, dispatch} = React.useContext(StateContext);
+    console.log({colorId, openId, setId, index});
 
     function handleDeleteColor(index) {
         dispatch({
@@ -27,13 +28,25 @@ function SingleColor({color, colorId, openId, setId, toShow, index}) {
     }
 
     if(toShow == false) {
-        return (
-        <div className={styles.wrapper}>
 
+        if(state.numOfVisibleColors == index) {
+            return (
+                <div className={styles.wrapper}>
             <button className={styles.btn} onClick={() => dispatch({
                 type: 'ADD-COLOR'
             })} >
                 <div className={styles.colorDiv}>+</div>    
+            </button> 
+        </div>
+            )
+
+        }
+        
+
+        return (
+        <div className={styles.wrapper}>
+            <button className={styles.btn}  >
+                <div className={styles.colorDiv}></div>    
             </button> 
         </div>
         )
