@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:  'departure-mono', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,8 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --gradient: "";
-  --gray-300: hsl(260, 8%, 21%);
+  --hue-gradient: "";
+  --main-gradient: "";
+  --gray-300: hsl(260, 8%, 25%);
+  --gray-500: hsl(260, 8%, 50%);
+  --gray-700: hsl(199, 8%, 39%);
+  --box-size: 250px;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -25,3 +29,7 @@
   white-space: nowrap;
 }
 
+@font-face {
+  font-family: 'departure-mono';
+  src: url('./../public/font/DepartureMono-Regular.woff2') format('woff2');
+}

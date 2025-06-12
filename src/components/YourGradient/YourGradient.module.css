@@ -1,0 +1,7 @@
+.gradientCodeContainer {
+    font-family: monospace;
+    font-size: 0.875rem;
+    border: 1px solid var(--gray-700);
+    padding: 12px;
+    border-radius: 6px;
+}

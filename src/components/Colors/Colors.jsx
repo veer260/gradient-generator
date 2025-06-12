@@ -17,8 +17,8 @@ function Colors() {
     }
     
     return (
-        <div>
-            <h2>Colors</h2>
+        <div className={styles.colorWrapper}>
+            <h2>Colors:</h2>
             <div className={styles.colorsContainer}>
                 {
                 colorsArr.map(({id, hue, sat, light}, index) =>  <SingleColor toShow={index < numOfVisibleColors} index={index} setId={changeId} openId={openId} color={`hsl(${hue}deg ${sat}% ${light}%)`} colorId={id} key={id} />)

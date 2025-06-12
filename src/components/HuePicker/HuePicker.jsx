@@ -6,20 +6,23 @@ import usePlaceChild from '../../hooks/usePlaceChild';
 function HuePicker({color, onHueChange}) {
     const hueRef = React.useRef();
     const triggerRef = React.useRef();
-    const pos = usePlaceChild(hueRef);
+    const pos = usePlaceChild(hueRef, {
+        x: ((color.hue)/360)*150, 
+        y: 0
+    }, triggerRef );
 
     React.useEffect(() => {
         const trigger = triggerRef.current;
         if(trigger) {
             trigger.style.left = `${pos.x}px`;
-            const newHue = `${Math.trunc((pos.x/150)*360)}`
+            const newHue = Math.trunc((pos.x/150)*360);
             onHueChange(newHue);
         }
     },[pos]);
 
     return (
         <div className={styles.hueContainer}>
-            <div className={styles.huePicker} ref={hueRef} style={{'--gradient': `linear-gradient(${gradient})`}}>
+            <div className={styles.huePicker} ref={hueRef} style={{'--hue-gradient': `linear-gradient(${gradient})`}}>
                 <div ref={triggerRef} className={styles.trigger}></div>
             </div>
         </div>

@@ -1,4 +1,8 @@
 .superheader {
     text-align: center;
-    color: white;
+    color: gray;
+}
+
+.superheader h1 {
+    color: yellow;
 }

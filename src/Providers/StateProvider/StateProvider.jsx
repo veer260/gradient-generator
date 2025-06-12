@@ -12,7 +12,6 @@ function StateProvider({children}) {
         }
     })
 
-    console.log(state);
 
 
     return (

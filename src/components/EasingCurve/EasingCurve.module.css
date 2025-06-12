@@ -1,0 +1,35 @@
+.curveWrapper {
+    position: relative;
+    border: 3px solid var(--gray-700);
+    border-radius: 6px;
+    background-image: radial-gradient(var(--gray-300) 1.5px, transparent 0);
+    background-size: 20px 20px;
+    /* border: 2px solid yellow; */
+}
+.curveWrapper svg {
+    display: block;
+}
+
+
+
+.triggerContainer {
+    height: var(--box-size);
+    width: var(--box-size);
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* border: 2px solid hotpink; */
+}
+
+/* .knob1, .knob2 {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    position: absolute;
+} */
+
+.knob1 {
+    
+}

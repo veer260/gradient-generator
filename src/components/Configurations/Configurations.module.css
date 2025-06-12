@@ -1,0 +1,9 @@
+.configWrapper {
+    display: flex;
+    font-size: 0.675rem;
+    /* justify-content: space-between; */
+    gap: 64px;
+    align-items: end;
+    margin-bottom: 24px;
+    /* border: 2px solid deeppink; */
+}

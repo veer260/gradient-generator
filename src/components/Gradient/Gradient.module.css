@@ -1,5 +1,22 @@
-.gradient {
-    border: 2px solid deepskyblue;
-    height: 400px;
+.gradientWrapper {
+    --breathing-space: 7px;
     width: 100%;
+    background-color: hsl(0, 4%, 14%);
+    padding-top: var(--breathing-space);
+    padding-bottom: var(--breathing-space);
+    border: 1px solid rgba(128, 128, 128, 0.508);
+    border-radius: 15px;
+    position: sticky;
+    top: 24px;
+    
+}
+
+.gradient {
+    width: calc(100% - 2*var(--breathing-space));
+    background: var(--main-gradient);
+    margin-right: auto;
+    margin-left: auto;
+    height: 600px;
+    border-radius: 8px;
+   
 }

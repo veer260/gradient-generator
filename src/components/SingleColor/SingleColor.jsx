@@ -18,6 +18,14 @@ function SingleColor({color, colorId, openId, setId, toShow, index}) {
 
     }
 
+    function handleOpenClose() {
+                if(openId == colorId) {
+                    setId('');
+                    return;
+                }
+                setId(colorId);
+    }
+
     if(toShow == false) {
         return (
         <div className={styles.wrapper}>
@@ -32,13 +40,7 @@ function SingleColor({color, colorId, openId, setId, toShow, index}) {
     }
     return (
         <div className={styles.wrapper}>
-            <button onMouseOver={() => console.log('in button')} onClick={() => {
-                if(openId == colorId) {
-                    setId('');
-                    return;
-                }
-                setId(colorId);
-            }}  className={styles.btn}>
+            <button onMouseOver={() => console.log('in button')} onClick={handleOpenClose}  className={styles.btn}>
                 <div style={{backgroundColor: `${color}`}} className={styles.colorDiv}></div>
                 
             </button>
@@ -47,7 +49,8 @@ function SingleColor({color, colorId, openId, setId, toShow, index}) {
             </button>
             
             { 
-                openId == colorId && <ColorPicker></ColorPicker>
+                openId == colorId && 
+                     <ColorPicker index={index} ></ColorPicker>   
             }
         </div>       
     )

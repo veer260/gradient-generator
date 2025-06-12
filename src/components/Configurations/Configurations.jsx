@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './Configurations.module.css';
-import Colors from '../Colors/Colors';
+import AngleKnob from '../AngleKnob/AngleKnob';
+import EasingCurve from '../EasingCurve/EasingCurve';
 
 function Configurations() {
     return (
-        <div>
-            <Colors />
+        <div className={styles.configWrapper}>
+            <AngleKnob />
+            <EasingCurve />
             
             
         </div>

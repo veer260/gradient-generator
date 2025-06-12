@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    isolation: isolate;
 }
 
 .btn {
@@ -20,10 +19,9 @@
 
 
 .colorDiv {
-    --size: 50px;
+    --size: 80px;
     height: var(--size);
     width: var(--size);
-    background-color: hsl;
     position: relative;
     outline: 2px solid rgba(128, 128, 128, 0.295);
     outline-offset: 3px;
