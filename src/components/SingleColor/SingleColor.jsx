@@ -27,17 +27,17 @@ function SingleColor({color, colorId, openId, setId, toShow, index}) {
                 setId(colorId);
     }
 
-    if(toShow == false) {
 
+    if(toShow == false) {
         if(state.numOfVisibleColors == index) {
             return (
                 <div className={styles.wrapper}>
-            <button className={styles.btn} onClick={() => dispatch({
-                type: 'ADD-COLOR'
-            })} >
-                <div className={styles.colorDiv}>+</div>    
-            </button> 
-        </div>
+                    <button className={styles.btn} onClick={() => dispatch({
+                        type: 'ADD-COLOR'
+                    })} >
+                        <div className={styles.colorDiv}>+</div>    
+                    </button> 
+                </div>
             )
 
         }
@@ -45,12 +45,14 @@ function SingleColor({color, colorId, openId, setId, toShow, index}) {
 
         return (
         <div className={styles.wrapper}>
-            <button className={styles.btn}  >
-                <div className={styles.colorDiv}></div>    
+            <button className={styles.btn}>
+                <div style={{outline: `2px solid rgba(128, 128, 128, 0.295)`}} className={styles.colorDiv}></div>    
             </button> 
         </div>
         )
     }
+
+
     return (
         <div className={styles.wrapper}>
             <button onMouseOver={() => console.log('in button')} onClick={handleOpenClose}  className={styles.btn}>
