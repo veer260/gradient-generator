@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Knob.module.css';
 import { BOXSIZE } from '../../constants/Constants';
 
-function Knob({coordinates, toFollow, setToFollow, containerRef, setControl }) {
+function Knob({coordinates, toFollow, setToFollow, containerRef, setControl, controlPoints }) {
     const knobRef = React.useRef();
 
     React.useEffect(() => {
@@ -32,6 +32,7 @@ function Knob({coordinates, toFollow, setToFollow, containerRef, setControl }) {
     }, [toFollow, coordinates]);
     return (
         <button 
+            style={{left: `${controlPoints.x}px`, top: `${controlPoints.y}px` }}
             ref={knobRef}
             className={styles.knob}
             onMouseDown={() => setToFollow(true)} 

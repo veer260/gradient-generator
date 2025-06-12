@@ -32,13 +32,14 @@ function EasingCurve() {
             <div ref={wrapperRef} className={styles.curveWrapper}>
                 <svg height={BOXSIZE} width={BOXSIZE} >
                    
-                    <path d={`M ${controlB.x} ${controlB.y} L ${BOXSIZE-4} 4`} strokeLinecap='round' strokeDasharray="0.33,7" stroke='hsl(180deg 2% 55%)' strokeWidth={3}  ></path>
-                    <path d={`M ${controlA.x} ${controlA.y} L 4 ${BOXSIZE-4} `} strokeLinecap='round' strokeDasharray="0.33,7" stroke='hsl(180deg 2% 55%)' strokeWidth={3}  ></path>
-                     <path stroke-linecap="round" strokeWidth={4} fill='transparent' d={`M 4 ${BOXSIZE-4} C ${controlA.x} ${controlA.y} ${controlB.x} ${controlB.y} ${BOXSIZE-4} 4`} stroke="white" > </path>
+                    <path d={`M ${BOXSIZE-4} 4  L ${controlB.x} ${controlB.y}`} strokeLinecap='round' strokeDasharray="0.33,7" stroke='hsl(180deg 2% 55%)' strokeWidth={3}  ></path>
+                    <path d={`M 4 ${BOXSIZE-4}  L ${controlA.x} ${controlA.y} `} strokeLinecap='round' strokeDasharray="0.33,7" stroke='hsl(180deg 2% 55%)' strokeWidth={3}  ></path>
+                    <path stroke-linecap="round" strokeWidth={4} fill='transparent' d={`M 4 ${BOXSIZE-4} C ${controlA.x} ${controlA.y} ${controlB.x} ${controlB.y} ${BOXSIZE-4} 4`} stroke="white" > </path>
                 </svg>
 
                 <div className={styles.triggerContainer}>
                     <Knob 
+                    controlPoints={controlA}
                     coordinates={coordinates} 
                     toFollow={toFollowA} 
                     setToFollow={setToFollowA}
@@ -46,6 +47,7 @@ function EasingCurve() {
                     setControl={setControlA}
                     />
                     <Knob 
+                    controlPoints={controlB}
                     coordinates={coordinates} 
                     toFollow={toFollowB} 
                     setToFollow={setToFollowB}

@@ -37,12 +37,12 @@ const State = {
         y: BOXSIZE+8 
     },
     {
-        x: 0,
-        y: 0
+        x: 80,
+        y: BOXSIZE-10
     },
     {
-        x: 0,
-        y: 0
+        x: BOXSIZE-80,
+        y: 10
     },
     {
         x: BOXSIZE-8,
